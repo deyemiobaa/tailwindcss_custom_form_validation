@@ -162,7 +162,7 @@ We make use if the pseudo-class `:invalid` to style the button when the form is 
 
 Tailwind makes it easy to add custom validation styles and messages to our forms without JavaScript. We can also use JavaScript to add more functionality to our forms. I hope you enjoyed this tutorial. If you have any questions, feel free to ask in the comments section below.
 
-You can find the code for this tutorial on [GitHub](
+You can find the code for this tutorial on [GitHub](https://github.com/deyemiobaa/tailwindcss_custom_form_validation)
 
 ## Resources
 
