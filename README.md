@@ -1,6 +1,10 @@
 # Adding Custom Validation To a Form With TailwindCSS
 
+_**Prerequisites:** This article assumes you have tailwindcss set up in an existing project. If that's not the case, follow this [guide](https://tailwindcss.com/docs/installation) to set one up like it was done for this article._
+
+
 ## Introduction
+
 In this article, we will be looking at how to add custom validation to a form with TailwindCSS. The form is a simple html form and can be used on any project that uses TailwindCSS.
 
 ## Basic Form Structure
@@ -39,7 +43,7 @@ The form is a simple login form with a two input fields and a submit button with
 </main>
 ```
 
-In our form, we have two input fields and a submit button. The input fields have a `required` attribute which means that the form cannot be submitted without the fields being filled. The `required` attribute also shows a popup message when the form is submitted without the fields being filled.
+In our form, we have two required input fields and a submit button. Whenever you add the `required` attribute to input fields it shows an error like the one below when you try to submit it without completing the fields.
 
 <img src="./src/assets/default_validation.png" alt="default validation">
 
@@ -91,7 +95,7 @@ In CSS, we can use the `:invalid` pseudo-class to style an input field when it i
 <!-- ... -->
 ```
 
-For the email field we are using a standard regex pattern that checks for a valid email address. This regular expression matches email addresses that have a username consisting of one or more lowercase letters, digits, dots, underscores, percent signs, plus signs, and hyphens, followed by an at symbol, a domain name consisting of one or more lowercase letters, digits, dots, and hyphens, a period, and a TLD consisting of two or more lowercase letters.
+For the email field, we are using a standard regex pattern that checks for a valid email address.
 
 For the password field, we are using a regex pattern that checks for a password with a minimum of 7 characters.
 
@@ -132,7 +136,7 @@ Now, we've add custom validation styles and messages to our form. But, we can st
 
 ## Preventing Form Submission
 
-To prevent the form from being submitted when the fields are empty or invalid, we will be using the `group` class on the form. Simalar to the `peer` class, the `group` class allows us to style an element based on the state of the parent element. 
+To prevent the form from being submitted when the fields are empty or invalid, we will be using the `group` class on the form. Similar to the `peer` class, the `group` class allows us to style an element based on the state of the parent element. 
 
 Since the input fields are nested inside the form, when any of the input fields are invalid, the form will be invalid. We can use this to disable the button and prevent the form from being submitted.
 
